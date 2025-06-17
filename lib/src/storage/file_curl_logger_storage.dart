@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'curl_logger_storage.dart';
