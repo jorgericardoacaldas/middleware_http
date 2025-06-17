@@ -14,7 +14,7 @@ class FileCurlLoggerStorage implements CurlLoggerStorage {
     required int? statusCode,
   }) async {
     try {
-      final directory = "C:/Users/jorge.caldas/OneDrive - Inmetrics/Documentos";//await getApplicationDocumentsDirectory();
+      final directory = "C:/Users/jorge.caldas";//await getApplicationDocumentsDirectory();
       final file = File('${directory}/$fileName');
 
       final responseLog = 'Status: ${statusCode ?? 'No status code'}\n'
