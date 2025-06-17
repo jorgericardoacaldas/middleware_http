@@ -16,7 +16,7 @@ class RemoteCurlLoggerStorage implements CurlLoggerStorage {
     required int? statusCode,
   }) async {
     try {
-      print('DADOS : ');
+      print('DADOS : $endpoint ,$curlCommand, $responseBody, $statusCode');
       
     } catch (e) {
       print('Error sending curl log to remote: $e');
