@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:middleware_http/curl_logger_interceptor.dart';
-import 'curl_logger_interceptor.dart';
 
 class CurlLoggerInterceptor extends Interceptor {
   final CurlLoggerStorage storage;
