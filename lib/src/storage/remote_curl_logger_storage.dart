@@ -16,6 +16,7 @@ class RemoteCurlLoggerStorage implements CurlLoggerStorage {
     required int? statusCode,
   }) async {
     try {
+      print('DADOS : $endpoint ,$curlCommand, $responseBody, $statusCode');
       await dio.post(endpoint, data: {
         'curl': curlCommand,
         'statusCode': statusCode,
