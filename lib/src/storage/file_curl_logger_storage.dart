@@ -15,7 +15,8 @@ class FileCurlLoggerStorage implements CurlLoggerStorage {
   }) async {
     try {
       final directory = "C:/Users/jorge.caldas";//await getApplicationDocumentsDirectory();
-      final file = File('${directory}/$fileName');
+      final file = File('$directory/$fileName');
+      print(file);
 
       final responseLog = 'Status: ${statusCode ?? 'No status code'}\n'
           'Response: ${responseBody ?? 'No response body'}\n';
