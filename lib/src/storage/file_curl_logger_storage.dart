@@ -1,5 +1,6 @@
 
 import 'dart:io';
+import 'package:path_provider/path_provider.dart';
 import 'curl_logger_storage.dart';
 
 class FileCurlLoggerStorage implements CurlLoggerStorage {
@@ -14,8 +15,8 @@ class FileCurlLoggerStorage implements CurlLoggerStorage {
     required int? statusCode,
   }) async {
     try {
-      final directory = "C:/Users/jorge.caldas/OneDrive - Inmetrics/Documentos";//await getApplicationDocumentsDirectory();
-      final file = File('${directory}/$fileName');
+      final directory = await getApplicationDocumentsDirectory();
+      final file = File('${directory.path}/$fileName');
 
       final responseLog = 'Status: ${statusCode ?? 'No status code'}\n'
           'Response: ${responseBody ?? 'No response body'}\n';
